@@ -6,7 +6,10 @@ public class FooBarQix {
         if (input.equalsIgnoreCase("1"))
             return "1";
 
-        return "2";
+        if (input.equalsIgnoreCase("2"))
+            return "2";
+
+        return "";
     }
 
 }

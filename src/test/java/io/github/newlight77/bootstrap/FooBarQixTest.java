@@ -19,7 +19,7 @@ public class FooBarQixTest {
     }
 
     @Test
-    void shouldComputeTwo_whenHavingTowAsInput() {
+    void shouldComputeTwo_whenHavingTwoAsInput() {
         // Arrange
         String input = "2";
 
@@ -30,4 +30,15 @@ public class FooBarQixTest {
         assertEquals("2", result);
     }
 
+    @Test
+    void shouldComputeEmptyString_whenHavingEmptyStringAsInput() {
+        // Arrange
+        String input = "";
+
+        // Act
+        String result = new FooBarQix().compute(input);
+
+        // Assert
+        assertEquals("", result);
+    }
 }
