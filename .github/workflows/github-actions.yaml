@@ -1,0 +1,15 @@
+name: Github actions
+on:
+- push
+jobs:
+  BuildAndTest:
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v2
+    - name: setup jdk 17
+      uses: action/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+    - name: Test with Maven
+      run: mvn clean test
