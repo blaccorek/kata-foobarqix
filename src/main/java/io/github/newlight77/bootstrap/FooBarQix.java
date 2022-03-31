@@ -4,8 +4,17 @@ public class FooBarQix {
 
     public String compute(String input) {
         int value = Integer.parseInt(input);
-        if (value % 3 == 0) return "Foo";
-        if (value % 5 == 0) return "Bar";
+
+        String result = "";
+        if (value % 3 == 0) {
+            result += "Foo";
+        }
+        if (value % 5 == 0) {
+            result += "Bar";
+        }
+        if (!result.isEmpty()) {
+            return result;
+        }
         return input;
     }
 

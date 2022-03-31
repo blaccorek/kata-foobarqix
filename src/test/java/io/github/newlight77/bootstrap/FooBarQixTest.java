@@ -65,4 +65,16 @@ public class FooBarQixTest {
         // Assert
         assertEquals("Bar", result);
     }
+
+    @Test
+    void shouldComputeFooBar_whenHavingFifteen() {
+        // Arrange
+        String input = "15";
+
+        // Act
+        String result = new FooBarQix().compute(input);
+
+        // Assert
+        assertEquals("FooBar", result);
+    }
 }
