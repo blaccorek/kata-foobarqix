@@ -41,4 +41,28 @@ public class FooBarQixTest {
         // Assert
         assertEquals("", result);
     }
+
+    @Test
+    void shouldComputeFoo_whenHavingThree() {
+            // Arrange
+            String input = "3";
+
+            // Act
+            String result = new FooBarQix().compute(input);
+
+            // Assert
+            assertEquals("Foo", result);
+    }
+
+    @Test
+    void shouldComputeBar_whenHavingFive() {
+        // Arrange
+        String input = "5";
+
+        // Act
+        String result = new FooBarQix().compute(input);
+
+        // Assert
+        assertEquals("Bar", result);
+    }
 }
