@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class FooBarQixTest {
 
     @Test
-    void noRuleTest() {
+    void shouldComputeOne_whenHavingOneAsInput() {
         // Arrange
         String input = "1";
 
@@ -16,6 +16,18 @@ public class FooBarQixTest {
 
         // Assert
         assertEquals("1", result);
+    }
+
+    @Test
+    void shouldComputeTwo_whenHavingTowAsInput() {
+        // Arrange
+        String input = "2";
+
+        // Act
+        String result = new FooBarQix().compute(input);
+
+        // Assert
+        assertEquals("2", result);
     }
 
 }
